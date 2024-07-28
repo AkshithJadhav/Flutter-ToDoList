@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:todo_list/widgets/my_button.dart';
 
-class DialogBox extends StatelessWidget {
+class EditName extends StatelessWidget {
   final controller;
   final VoidCallback onSave;
   final VoidCallback onCancel;
-  const DialogBox({
+  const EditName({
     super.key,
     required this.controller,
     required this.onSave,
@@ -28,8 +28,8 @@ class DialogBox extends StatelessWidget {
               decoration: InputDecoration(
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                prefixIcon: const Icon(Icons.add),
-                hintText: 'Add New Task',
+                prefixIcon: const Icon(Icons.edit),
+                hintText: 'Edit Name',
                 fillColor: Colors.white,
                 filled: true,
               ),

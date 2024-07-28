@@ -4,19 +4,21 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 class ToDoItem extends StatelessWidget {
   final String taskName;
   final bool taskCompleted;
-  Function(bool?) onChanged;
-  Function(BuildContext)? deleteFunction;
-  ToDoItem({
-    super.key,
-    required this.taskName,
-    required this.taskCompleted,
-    required this.onChanged,
-    required this.deleteFunction});
+  final Function(bool?) onChanged;
+  final Function(BuildContext)? deleteFunction;
+  final Function()? edit;
+  const ToDoItem(
+      {super.key,
+      required this.taskName,
+      required this.taskCompleted,
+      required this.onChanged,
+      required this.deleteFunction,
+      required this.edit});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10,right: 10,top: 8),
+      padding: const EdgeInsets.only(left: 6, right: 6, top: 15),
       child: Slidable(
         endActionPane: ActionPane(
           motion: const StretchMotion(),
@@ -27,24 +29,44 @@ class ToDoItem extends StatelessWidget {
               backgroundColor: Colors.red,
               borderRadius: BorderRadius.circular(12),
               label: 'Delete',
-              ),
+            ),
           ],
         ),
         child: Container(
-          margin: const EdgeInsets.only(left: 20,right: 20),
-          height: 50,
-          width: 350,
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(12),),
+          margin: const EdgeInsets.only(left: 15, right: 15),
+          height: 55,
+          width: 380,
+          padding: const EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+          ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-        
-            Checkbox(value: taskCompleted, onChanged: onChanged),
-        
-              Text(taskName,style: TextStyle(fontSize: 16,decoration: taskCompleted? TextDecoration.lineThrough: TextDecoration.none,),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Checkbox(value: taskCompleted, onChanged: onChanged),
+                  Text(
+                    taskName,
+                    style: TextStyle(
+                      fontSize: 16,
+                      decoration: taskCompleted
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none,
+                    ),
+                  ),
+                ],
+              ),
+              IconButton(
+                onPressed: edit,
+                icon: const Icon(
+                  Icons.edit,
+                ),
+              )
             ],
           ),
-          
         ),
       ),
     );
