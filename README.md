@@ -1,16 +1,26 @@
-# todo_list
+# ToDo_List
 
-A new Flutter project.
+## Overview 
+The ToDoList App is a simple and efficient task management tool designed to help users organize their daily activities. With a clean user interface, it allows you to create, update, and edit your tasks easily. Whether you're managing a personal to-do list or organizing tasks for a project, this app keeps you on top of your responsibilities.
+<br>
+Users can Swipe the Task to delete it or click the Delete button which is located on the top to Delete all the tasks. <br>
+## Features
+Add Tasks: Quickly add new tasks to your list with a simple interface.<br>
+Edit Tasks: Modify existing tasks to keep them up-to-date.<br>
+Mark as Completed: Check off tasks as you complete them, giving you a sense of accomplishment.<br>
+Delete Tasks: Remove tasks that are no longer relevant.<br>
+Persistent Storage: Your tasks are saved locally, so you can access them anytime, even after closing the app.<br>
 
-## Getting Started
+## Technologies Used
+Framework: Flutter <br>
+Programming Language: Dart<br>
+Database: Hive<br>
 
-This project is a starting point for a Flutter application.
+## App Preview
+![image](https://github.com/user-attachments/assets/197dca2c-700a-4166-9fa8-a8543a9a1f86) <br>
+![image](https://github.com/user-attachments/assets/9b2ede42-e4cb-4406-8e4a-f64626ef8f37) <br>
+![image](https://github.com/user-attachments/assets/e275fbfb-c5fa-4ada-ba36-4abd1d00346e)<br>
+![image](https://github.com/user-attachments/assets/da586a41-1081-4797-9cec-7a292a48f978)<br>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
